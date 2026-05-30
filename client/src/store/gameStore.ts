@@ -98,8 +98,8 @@ export const useGameStore = create<GameStore>((set, get) => ({
     playAgain: () => {
         const { socket } = get();
         if (socket) {
-            // Clear game results immediately so the modal closes
-            set({ gameResults: null });
+            // Clear game results AND game state immediately so the modal closes and state resets
+            set({ gameResults: null, gameState: null });
             socket.emit('playAgain');
         }
     }

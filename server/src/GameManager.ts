@@ -236,7 +236,11 @@ export class GameManager {
     public removePlayer(socketId: string) {
         this.gameState.players = this.gameState.players.filter(p => p.id !== socketId);
         this.broadcastState();
-        if (this.gameState.players.length === 0) {
+        
+        // Reset game when all REAL players (non-bots) have left
+        const realPlayers = this.gameState.players.filter(p => !this.isGhostPlayer(p.name));
+        if (realPlayers.length === 0) {
+            console.log('All real players disconnected - resetting game');
             this.resetGame();
         }
     }
