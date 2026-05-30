@@ -10,7 +10,7 @@ Trade stocks, crypto, bonds, and ETFs while reacting to live market events and c
 ## 🚀 Try It Now
 
 <p align="center">
-  <a href="https://bull-vs-bear.netlify.app/" target="_blank">
+  <a href="https://gamebullbear.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/▶%20Try%20Now-Play%20Live-brightgreen?style=for-the-badge" />
   </a>
 </p>
